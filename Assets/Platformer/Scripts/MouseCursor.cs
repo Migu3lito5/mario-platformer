@@ -24,12 +24,7 @@ public class MouseCursor : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 10f)) {
                ClickedGameObject(hit.transform.gameObject);
             }
-
-
-
         }
-
-        
     }
     private void ClickedGameObject(GameObject Object)
     {
@@ -42,7 +37,7 @@ public class MouseCursor : MonoBehaviour
 
     private void hitCoinBlock()
     {
-        audioManager.Play("Coin");
+       audioManager.Play("Coin");
        guiController.GetComponent<GUIController>().UpdateCoinText();
     }
 
